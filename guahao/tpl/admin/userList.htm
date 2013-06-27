@@ -1,0 +1,39 @@
+    <div id="pageList" class="box">
+    <table class="listTable" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th width="50">卡号</th>
+          <th width="70">真实姓名</th>
+          <th width="60">出生年月</th>
+          <th width="50">性别</th>
+          <th width="50">类型</th>
+          <th width="100">电话</th>
+          <th width="100">手机</th>
+          <th width="80">注册日期</th>
+          <th>操作</th>
+        </tr>
+		{if empty($list)}
+        <tr>
+		<td colspan="9">没有相关记录。</td>
+        </tr>
+		{else}
+		  {section name=loop loop=$list}
+        <tr>
+          <td>{$list[loop].uid}</td>
+          <td><a href="?m=user&o=edit&p=uid,{$list[loop].uid}">{$list[loop].truename}</a></td>
+          <td>{$list[loop].birthday}</td>
+          <td>{if $list[loop].gender}男{else}女{/if}</td>
+          <td>{$userTypes[$list[loop].type]}</td>
+          <td>{$list[loop].tel}</td>
+          <td>{$list[loop].mobile}</td>
+          <td>{$list[loop].addtime|date_format:"%Y-%m-%d"}</td>
+          <td class="operate"><a href="?m=user&o=edit&p=uid,{$list[loop].uid}" title="修改用户资料">编辑</a> <a href="?m=appoint&o=list&p=uid,{$list[loop].uid}">记录</a> <a href="javascript:confirmGo('?m=user&o=delete&p=uid,{$list[loop].uid}','确定要删除吗？')">删除</a></td>
+        </tr>
+		  {/section}
+		{/if}
+      </tbody>
+    </table>
+	<div class="pages">
+	  {$pages}
+	</div>
+    </div>

@@ -1,0 +1,8 @@
+
+<div id="userInfo">
+  <h2>用户信息</h2>
+  <p>就诊卡号：{$session.uid}</p>
+  <p>用户姓名：{$session.truename}</p>
+  <p>用户性别：{if $session.gender == 1}男{else}女{/if}</p>
+  <p><a href="?m=room&o=list">我要挂号</a> &nbsp;  <a href="?m=appoint&o=list">挂号记录</a> &nbsp;  <a href="?m=user&o=quit">安全退出</a></p>
+</div>

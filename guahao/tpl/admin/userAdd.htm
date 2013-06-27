@@ -1,0 +1,50 @@
+
+<script type="text/javascript" src="lib/images/date.js"></script>
+<link type="text/css" rel="stylesheet" href="lib/images/date.css" />
+	<div id="pageList" class="box">
+        <form method="post" action="" class="form">
+          <table cellpadding="0" cellspacing="0">
+ <tbody>
+              <tr>
+                <td>就诊卡号：</td>
+                <td><input type="text" name="uid" value="{$user.uid}" {if $user.uid}disabled="disabled"{/if} /> <span class="msg">{$msg.uid}</span></td>
+              </tr>
+              <tr>
+                <td>真实姓名：</td>
+                <td><input type="text" name="truename" value="{$user.truename}"  /> <span class="msg">{$msg.truename}</span></td>
+              </tr>
+              <tr>
+                <td>身份证号：</td>
+                <td><input type="text" name="id" value="{$user.id}"  /> <span class="msg">{$msg.id}</span></td>
+              </tr>
+              <tr>
+                <td>出生年月：</td>
+                <td><input type="text" value="{$user.birthday}"  id="birthday" name="birthday" onclick="SelectDate(this,finishtimeformat)"  /> <span class="msg">{$msg.birthday}</span></td>
+              </tr>
+              <tr>
+                <td>性别：</td>
+                <td><input type="radio" value="1"  name="gender"{if !empty($user.gender)} checked="checked"{/if} /> 男 <input type="radio" value="0"  name="gender"{if empty($user.gender)} checked="checked"{/if}  /> 女 <span class="msg">{$msg.gender}</span></td>
+              </tr>
+              <tr>
+                <td>座机号码：</td>
+                <td><input name="tel" value="{$user.tel}"  /> <span class="msg">{$msg.tel}</span></td>
+              </tr>
+              <tr>
+                <td>手机号码：</td>
+                <td><input name="mobile" value="{$user.mobile}"  /> <span class="msg">{$msg.mobile}</span></td>
+              </tr>
+              <tr>
+                <td>用户类型：</td>
+                <td><select name="type">{html_options options=$userTypes selected=$user.type}</select> <span class="msg">{$msg.type}</span></td>
+              </tr>
+              <tr>
+                <td>联系地址：</td>
+                <td><input name="address" value="{$user.address}" class="add" /> <span class="msg">{$msg.address}</span></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="submit" name="submit" value="确认更改"  class="submit"/> <span class="msg">{$msg.result}</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+    </div>

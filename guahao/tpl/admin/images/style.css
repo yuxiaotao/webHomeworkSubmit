@@ -1,0 +1,104 @@
+*{ padding:0; margin:0}
+body{ font-size:12px; background:#EBEBEB;font-family: Arial,Helvetica,sans-serif,"宋体"; color:#333}
+li{ list-style:none}
+img{ border:none}
+a{ text-decoration:none;color:#333}
+a:hover{ text-decoration:underline;color:#DC3E00}
+.w980{ width:980px; margin:0 auto; clear:both}
+.gray100{ width:100%; background:#F3F3F3; padding-bottom:20px}
+.gray100_2{ width:100%; background:#EBEBEB; padding-bottom:20px}
+.cl{ width:100%; clear:both; height:0; line-height:0}
+.none{ display:none}
+.wave{ height:12px; background:url(bg_wave.gif) repeat-x}
+.blueline{ border-bottom:2px solid #238DE7;}
+.line1{ border-bottom:1px solid #238de7; clear:both; margin:20px 0}
+.pages{border: 1px solid #FFC969;background: #FFECC4;padding: 10px 15px; margin:10px auto; text-align:center; margin}
+.pages a{color:#DC3E00; margin:0 8px}
+.pages a.current{ font-weight:bold}
+.l33{ width:33%; float:left}
+.l50{ width:50%; float:left}
+.r50{ width:50%; float:right}
+.h10{ height:10px; width:100%; clear:both}
+.green{ color:#33CC00}
+#header .topBar{ height:27px; background:url(bg_topbar.gif) repeat-x;}
+#header .topBar .box{ width:980px; margin:0 auto; line-height:27px; height:27px; background:url(shizi.jpg) 0 center no-repeat; text-indent:26px}
+#header .topBar .box p{height:27px; line-height:27px}
+#header .topBar .box p b{ color:#000; font-size:14px; margin-right:10px}
+#header .topBar .box p.welcome{ color:#999; float:left; }
+#header .topBar .box p.welcome a{ color:#0080C8; margin-left:8px}
+#header .topBar .box p.userBar{ color:#ddd; float:right}
+#header .topBar .box p.userBar a{ color:#333; margin:0 8px}
+#header .midBar{ height:36px; padding:20px 0 0}
+#userNav{height:33px;border-bottom:#238de7 3px solid; float:left}
+#userNav ul{height:33px; margin:0 auto; width:980px}
+#userNav ul li{ height:33px; float:left; margin-right:3px;overflow:hidden}
+#userNav ul li a{ height:32px; line-height:32px; float:left;background:url(nav_g.jpg) repeat-x; padding:0 20px; color:#666; border:#d4d4d4 1px solid; border-bottom:none}
+#userNav ul li a:hover{ text-decoration:none; color:#ff0000}
+#userNav ul li a.current{background:url(nav_b.jpg) repeat-x; color:#fff; border:1px solid #0b8bd5; border-bottom:none }
+#userNav ul li a.current:hover{color#fff}
+#footer{ border-top:1px solid #dbdbdb; text-align:center; color:#666}
+#footer .box{ width:980px; margin:10px auto}
+#footer .box .botNav{ line-height:30px; height:30px; color:#666}
+#footer .box .botNav a{ margin:0 10px; color:#666}
+#footer .box .copyright{ line-height:24px}
+#admin{width:980px; margin:0 auto; padding-top:10px; min-height:400px}
+#admin span.msg{ color:#CC0000; font-size:12px}
+#admin .sideBar{ float:left; width:178px; border:1px solid #ddd; background:#fff;min-height:200px}
+#admin .mainBar{ float:right; width:778px;border:1px solid #ddd; background:#fff;}
+#admin .sideBar h2{background:url(left_box_titbg.jpg) repeat-x;height:32px; line-height:32px; text-indent:10px; font-size:12px; color:#333;border-bottom:1px solid #ddd}
+#admin .sideBar h2 em{ background:url(bg_ico.png) 0 -680px; width:18px;height:32px; line-height:32px; float:left; margin-left:5px}
+#admin .sideBar ul{ padding:10px 20px}
+#admin .sideBar ul li{line-height:26px;background:url(bg_b.gif) no-repeat 0 center;text-indent:17px}
+#admin .sideBar ul li.current a{ font-weight:bold}
+#admin .sideBar ul li.line{line-height:1px; height:1px;border-top:1px dashed #ddd;background:none; margin:5px 0}
+#admin .sideBar ul li a{ }
+#admin .mainBar h2{background:url(left_box_titbg.jpg) repeat-x;height:32px; line-height:32px; text-indent:1em; font-size:12px; color:#333;border-bottom:1px solid #ddd}
+#admin .mainBar .box{ padding:10px}
+#admin .mainBar .box .note{ font-size:12px; border:1px dashed #ccc; line-height:22px; padding:5px;}
+#admin .mainBar .lbox{ border:1px solid #ddd; background:#fff;margin-bottom:10px; float:left; width:383px}
+#admin .mainBar .rbox{ border:1px solid #ddd; background:#fff;margin-bottom:10px; float:right; width:383px}
+#admin .mainBar .cbox{ padding:10px;}
+#admin .mainBar #myNotice p{line-height:22px; border-bottom:1px dashed #ddd;margin-bottom:10px;padding-bottom:10px}
+#admin .mainBar #myNotice ul li{ float:left; width:370px}
+
+#admin .mainBar .listTable2{ width:758px; border:1px solid #ccc; border-width:1px 1px 0 0}
+#admin .mainBar .listTable2 tr td{ border:1px solid #ccc; border-width: 0 0 1px 1px; line-height:22px; padding:5px 6px}
+#admin .mainBar .listTable2 tr td a{ margin-left:10px; color:#006699; text-decoration:underline}
+#admin .mainBar .listTable2 tr td a:hover{ color:#996600}
+#admin .mainBar .listTable{ width:758px; border:1px solid #dcdcdc; background:#fff; color:#666; font-size:12px}
+#admin .mainBar .listTable th{ height:33px; line-height:33px; background:#f2f2f2; padding:0 0 0 10px; text-align:left}
+#admin .mainBar .listTable td{padding:4px 0 4px 10px;border-top: 1px solid #EDEDED; line-height:20px}
+#admin .mainBar .listTable tr:hover td{ background:#fffeed}
+#admin .mainBar .listTable td a{font-size: 12px;display: inline-block;color: #1261D7;}
+#admin .mainBar .listTable td a.take{ font-size:12px; color:#DC3E00}
+#admin .mainBar .listTable td u{color: #DC3E00;font-size: 12px;font-family: Arial,Helvetica,sans-serif; text-decoration:none}
+#admin .mainBar .listTable td b{ font-size:12px; font-style:italic; font-weight:100}
+#admin .mainBar .listTable td.operate a{ margin-right:5px; color:#C00}
+#admin .mainBar .listTable td.operate a.edit{ color:#1261D7}
+#admin .mainBar #checkEmail p{ padding:10px 0; font-size:14px; line-height:25px }
+#admin .mainBar #checkEmail p a{ color:#ff0000; text-decoration:underline}
+#admin .mainBar #checkEmail .note,#admin .mainBar #profile .note{ margin:60px 0 10px 0}
+#admin .mainBar #profile .submit{ padding:4px 5px 3px }
+#admin .mainBar #profile table tr th,#admin .mainBar #profile table tr td{ font-weight:100; line-height:40px; height:40px; padding:0 10px; text-align:left; font-size:14px}
+#admin .mainBar h3{ font-size:12px; height:30px; line-height:30px}
+.form{ border:1px dashed #ccc; padding:8px}
+.form p{ line-height:22px;}
+.form table tr th{ text-align:left; font-weight:100}
+.form table tr th,.form table tr td{ line-height:22px; height:22px; padding:5px}
+.form textarea.smallTextArea{ width:630px; height:60px}
+.form textarea.midTextArea{ width:630px; height:120px}
+.form textarea.bigTextArea{ width:630px; height:520px}
+.form .submit{ padding:3px 10px}
+.form .smallTxt{ width:80px}
+.form .longTxt{ width:400px}
+.logList{ border:1px dashed #ddd; padding:6px; margin-bottom:10px}
+.logList p{ line-height:22px}
+
+
+#matterEdit textarea{width:100%; height:200px}
+#msgBox{ border:1px dashed #ddd; padding:10px; margin:10px}
+#msgBox p{ line-height:24px}
+#msgBox p a{ margin:0 5px; color:#006699}
+
+
+#doctorAdd .schedules input{ width:30px; margin-right:20px; }

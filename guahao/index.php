@@ -1,0 +1,49 @@
+<?php
+require('config.php');
+require('lib/functions.php');
+require('lib/db.class.php');
+require('lib/safe.class.php');
+require('lib/tpl.class.php');
+require('lib/mg.class.php');
+
+$_GET['m'] = isset($_GET['m']) ? $_GET['m'] : '';
+$_GET['o'] = isset($_GET['o']) ? $_GET['o'] : '';
+
+if($_GET['m'] != ''){
+  if(strlen($_GET['m']) > 8)//防止加载远程文件
+    exit('非法参数');
+  if(!ctype_alnum($_GET['m']))
+    exit('非法参数');
+}
+
+if($_GET['o'] != ''){
+  if(strlen($_GET['o']) > 15)//请注意，模块文件需要被直接使用的方法名不能超过15位
+    exit('非法参数');
+  if(!ctype_alnum($_GET['o']))
+    exit('非法参数');
+}
+
+if($_GET['m'] == ''){
+  $_GET['m'] = 'home';
+  $_GET['o'] = 'display';
+}
+
+$mFile = dirname(__FILE__).'/mod/'.$_GET['m'].'.php';
+if(!file_exists($mFile)){
+  msg('nomodel');
+}
+
+require($mFile);
+global $m;
+$m = new $_GET['m'];
+
+if($_GET['o'] != ''){
+	$oName = $_GET['m'].ucfirst(strtolower($_GET['o']));
+  if(method_exists($m,$oName))
+    $m->{$oName}();
+  else
+    msg('nopage');
+}
+
+$m->display();
+?>

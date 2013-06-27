@@ -1,0 +1,26 @@
+<div id="doctorAdd" class="box">
+  <form class="form" method="post" action="">
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <td>医生姓名：</td>
+        <td><input name="name" type="text" class="longTxt" value="{$doctor.name}" /> <span class="msg">{$msg.name}</span></td>
+      </tr>
+      <tr>
+        <td>所属科室：</td>
+        <td><select name="rid">{html_options options=$rooms selected=$doctor.rid}</select><span class="msg">{$msg.rid}</span></td>
+      </tr>
+      <tr>
+        <td>级别：</td>
+        <td><select name="type">{html_options options=$cfg.doctorTypes selected=$doctor.type}</select><span class="msg">{$msg.type}</span></td>
+      </tr>
+      <tr>
+        <td>放号量：</td>
+        <td class="schedules">{$schedules}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" name="submit" value="确认提交" class="submit" /> <span class="msg">{$msg.result}</span></td>
+      </tr>
+    </table>
+  </form>
+</div>

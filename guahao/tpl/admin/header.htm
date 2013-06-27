@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$mainTitle}-{$mainTitle}-{$cfg.sitename}</title>
+<link type="text/css" rel="stylesheet" href="{$imgDir}style.css" />
+<link type="text/css" rel="stylesheet" href="{$imgDir}user.css" />
+<script type="text/javascript" src="lib/images/jquery.js?v=172"></script>
+<script type="text/javascript" src="lib/images/common.js"></script>
+</head>
+
+<body>
+<div id="header">
+  <div class="topBar">
+    <div class="box">
+    <p class="welcome"><b>{$cfg.sitename}后台管理中心</b>  你好，{$session.username}！ </p>
+    <p class="userBar"><a href="javascript:window.print();">打印本页</a>  <a href="index.php?m=user&o=quit">退出系统</a>  <a href="./" target="_blank">网站首页</a></p>
+    </div>
+  </div>
+  <div class="midBar w980">
+
+    <div id="userNav">
+      <ul>
+      {section loop=$mainNav name=loop}
+        <li><a href="{$mainNav[loop][2]}"{if !empty($mainNav[loop][3])} target="_blank"{/if}{if $mainNav[loop][0] == $currentMenu} class="current"{/if}>{$mainNav[loop][1]}</a></li>
+      {/section}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="gray100">
+<div id="admin">
+  <div class="sideBar">
+   <h2><em> </em>{$menuTitle}</h2>
+	<ul>
+    {if $operateMenu}
+      {foreach from=$operateMenu key=k item=v}
+        {if $v == 'line'}
+      <li class="line"></li>
+        {else}
+      <li{if $mainTitle == $k} class="current"{/if}><a href="{$v}">{$k}</a></li>
+        {/if}
+      {/foreach}
+    {/if}
+	</ul>
+  </div>
+  <div class="mainBar">
+    <h2>{$mainTitle}</h2>

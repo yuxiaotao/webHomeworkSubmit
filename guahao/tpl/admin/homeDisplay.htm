@@ -1,0 +1,46 @@
+    <div class="mList box">
+    <table class="listTable2" cellpadding="0" cellspacing="0">
+      <tbody>
+  <tr>
+    <td width="220">会员总数：{$userNum} {if $userNum}<a href="?m=user&o=list">浏览</a>{/if}</td>
+    <td width="220">事项总数：{$matterNum} {if $matterNum}<a href="?m=matter&o=list">浏览</a>{/if}</td>
+    <td>已付公关费：{$payedPriceNum}笔，共{$payedPrice}元</td>
+    </tr>
+  <tr>
+    <td>认证会员：{$checkUserNum}</td>
+    <td>办成事项：{$successMatterNum} {if $successMatterNum}<a href="?m=matter&o=list&p=select,success">浏览</a>{/if}</td>
+    <td>已退公关费：{$refundPriceNum}笔，共{$refundPrice}元</td>
+    </tr>
+  <tr>
+    <td>锁定会员：{$lockUserNum}</td>
+    <td>办理中事项：{$doingMatterNum} {if $doingMatterNum}<a href="?m=matter&o=list&p=select,doing">浏览</a>{/if}</td>
+    <td>已付诚意金：{$payedDepositNum}笔，共{$payedDeposit}元</td>
+    </tr>
+  <tr>
+    <td>区域负责人：{$managerNum} {if $managerNum}<a href="?m=manager&o=list">浏览</a>{/if}</td>
+    <td>争议中事项：{$disputeMatterNum} {if $disputeMatterNum}<a href="?m=matter&o=list&p=select,dispute">浏览</a>{/if}</td>
+    <td>已退诚意金：{$refundDepositNum}笔，共{$refundDeposit}元</td>
+    </tr>
+  <tr>
+    <td>管理员：{$adminNum} {if $adminNum}<a href="?m=user&o=adminlist">浏览</a>{/if}</td>
+    <td>未办成事项：{$failedMatterNum} {if $failedMatterNum}<a href="?m=matter&o=list&p=select,failed">浏览</a>{/if}</td>
+    <td>&nbsp;</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+  <tr>
+    <td>待审核事项：{$toCheckMatterNum} {if $toCheckMatterNum}<a href="?m=matter&o=list&p=select,tocheck">浏览</a>{/if}</td>
+    <td>待支付公关费：{$toGivePriceNum}笔，共{$toGivePrice}元 {if $toGivePriceNum}<a href="?m=matter&o=list&p=select,tocheck">浏览</a>{/if}</td>
+    <td>待退还诚意金：{$toRefundDepositNum}笔，共{$toRefundDeposit}元</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>待退还公关费：{$toRefundPriceNum}笔，共{$toRefundPrice}元</td>
+    <td>&nbsp;</td>
+    </tr>
+      </tbody>
+    </table>
+    </div>

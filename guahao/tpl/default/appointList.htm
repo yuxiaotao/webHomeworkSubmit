@@ -1,0 +1,38 @@
+{include file="header.htm"}
+<div id="roomList">
+  <h2>我的预约记录</h2>
+  <div class="schedule">
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+      <th width="80">预约日期</th>
+      <th width="40">星期</th>
+      <th width="40">时间段</th>
+      <th width="40">时间</th>
+      <th width="140">预约科室</th>
+      <th width="60">预约医生</th>
+      <th width="40">状态</th>
+      <th width="">操作</th>
+      </tr>
+      {if empty($list)}
+      <tr>
+        <td colspan="5">暂无记录</td>
+      </tr>
+      {else}
+      {foreach from=$list item=appoint}
+        <tr>
+          <td>{$appoint.day}</td>
+          <td>{$appoint.week}</td>
+          <td>{$appoint.noon}</td>
+          <td>{$appoint.time}</td>
+          <td>{$appoint.room.name}</td>
+          <td>{$appoint.doctor.name}</td>
+          <td>{if $appoint.state == 1}已挂号{elseif $appoint.state == 2}已就诊{elseif $appoint.state == 3}已取消{elseif $appoint.state == 4}爽约{/if}</td>
+          <td>{if $appoint.state == 1}<a href="?m=appoint&o=cancel&p=aid,{$appoint.aid}">取消预约</a>{else} - {/if}</td>
+        </tr>
+      {/foreach}
+      {/if}
+    </table>
+  </div>
+</div>
+{include file="block/user.htm"}
+{include file="footer.htm"}

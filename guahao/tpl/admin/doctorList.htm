@@ -1,0 +1,29 @@
+    <div id="pageList" class="box">
+    <table class="listTable" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th width="50">编号</th>
+          <th width="200">医生姓名</th>
+          <th width="200">所属科室</th>
+          <th>操作</th>
+        </tr>
+		{if empty($list)}
+        <tr>
+		<td colspan="4">没有相关记录。</td>
+        </tr>
+		{else}
+		  {section name=loop loop=$list}
+        <tr>
+          <td>No.{$list[loop].did}</td>
+          <td><a href="?m=doctor&o=edit&p=did,{$list[loop].did}" target="_blank">{$list[loop].name}</a></td>
+          <td>{$list[loop].room.name}</td>
+          <td class="operate"><a href="?m=appoint&o=list&p=did,{$list[loop].did}" target="_blank">挂号记录</a> <a href="?m=doctor&o=edit&p=did,{$list[loop].did}">编辑</a> <a href="?m=doctor&o=delete&p=did,{$list[loop].did}">删除</a></td>
+        </tr>
+		  {/section}
+		{/if}
+      </tbody>
+    </table>
+	<div class="pages">
+	  {$pages}
+	</div>
+    </div>

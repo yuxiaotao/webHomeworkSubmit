@@ -1,0 +1,39 @@
+    <div class="mList box">
+    <table class="listTable" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th width="70">预约日期</th>
+          <th width="50">时间</th>
+          <th width="60">预约者</th>
+          <th width="40">性别</th>
+          <th width="120">预约科室</th>
+          <th width="70">预约医生</th>
+          <th width="70">预约状态</th>
+          <th width="100">联系方式</th>
+          <th>操作</th>
+        </tr>
+		{if empty($list)}
+        <tr>
+		<td colspan="9">没有找到没有符合条件的记录。</td>
+        </tr>
+		{else}
+		  {section name=loop loop=$list}
+        <tr>
+          <td>{$list[loop].day}</td>
+          <td>{$list[loop].time}</td>
+          <td><a href="?m=user&o=view&p=uid,{$list[loop].uid}" target="_blank">{$list[loop].user.truename}</a></td>
+          <td>{if $list[loop].user.gender == 1}男{else}女{/if}</td>
+          <td>{$list[loop].room.name}</td>
+          <td>{$list[loop].doctor.name}</td>
+          <td>{if $list[loop].state == 1}已挂号{elseif $list[loop].state == 2}已就诊{elseif $list[loop].state == 3}已取消{elseif $list[loop].state == 4}爽约{/if}</td>
+          <td>{$list[loop].user.mobile}{if $list[loop].user.tel}<br />{$list[loop].user.tel}{/if}</td>
+          <td class="operate"><a href="?m=appoint&o=edit&p=aid,{$list[loop].aid}">编辑</a> <a href="javascript:confirmGo('?m=appoint&o=delete&p=aid,{$list[loop].aid}','确定要删除吗？')">删除</a></td>
+        </tr>
+		  {/section}
+		{/if}
+      </tbody>
+    </table>
+	<div class="pages">
+	  {$pages}
+	</div>
+    </div>

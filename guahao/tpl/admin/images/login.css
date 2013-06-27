@@ -1,0 +1,14 @@
+body{background:#02729a url(bg.jpg) center 0 fixed repeat-x;}
+#login{ width:520px; background: #09C; border:1px dashed #fff;  padding:30px; position:absolute; top:50%; left:50%; margin:-150px auto auto -280px;  }
+#login .content{ width:500px; background: #9CF; border:1px solid #02729a; height:220px; padding:20px 10px 10px; margin:0 auto  }
+#login a{ text-decoration:none}
+#login a:hover{ text-decoration:underline}
+#login h1{ font-size:20px; font-weight:100; color:#036}
+#login h1,#login h2{ text-align:center}
+#login h2{ letter-spacing:1px; color:#333; font-size:13px; font-weight:100}
+#login table{ margin:10px auto; width:300px; font-weight:bold}
+#login table a{ font-weight:100}
+#login table tr td{ padding:5px}
+#login table tr td input.text{ width:200px}
+#login table tr td input.text_s{ width:60px}
+#login p{ text-align:center; line-height:20px; border-top:1px solid #02729a; padding:5px 0 0 0; color:#333}

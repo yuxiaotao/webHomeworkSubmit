@@ -1,0 +1,38 @@
+    <div id="pageList" class="box">
+        <form method="post" action="" class="form">
+          <table cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th width="100">Smtp邮箱账号：</th>
+                <th><input name="smtpCount" value="{$set.smtpCount}" type="text"   /> <span class="msg">{$msg.smtpCount}</span></th>
+              </tr>
+              <tr>
+                <td>Smtp邮箱密码：</td>
+                <td><input name="smtpPas" value="" type="password" /> <span class="msg">{$msg.smtpPas}</span></td>
+              </tr>
+              <tr>
+                <td>Smtp发送端口：</td>
+                <td><input name="smtpPort" value="{$set.smtpPort}"  /> <span class="msg">{$msg.smtpPort}</span></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="submit" name="submit" value="确认更改"  class="submit"/> <span class="msg">{$msg.result}</span> </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+          <div class="h10"></div>
+        <form method="post" action="" class="form" onsubmit="sendCheckMail();">
+          <table cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <th width="100">测试收件箱：</th>
+                <th><input name="smtpCount" value="" type="text"   /> <input type="submit" value="发送测试邮件" name="submit" class="submit" /></th>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <div class="h10"></div>
+        <div class="note">
+          <p><b>提示：</b>本系统采用SMTP代理邮件服务器发送系统邮件，请确定你的邮箱账号已开启smtp服务。</p>
+        </div>
+    </div>

@@ -1,0 +1,29 @@
+    <div id="wordList" class="box">
+    <table class="listTable" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th width="200">科室名称</th>
+          <th width="80">预约</th>
+          <th width="80">医生</th>
+          <th>操作</th>
+        </tr>
+		{if empty($list)}
+        <tr>
+		<td colspan="4">暂无任何科室。</td>
+        </tr>
+		{else}
+		  {section name=loop loop=$list}
+        <tr>
+          <td>{$list[loop].name}</td>
+          <td><a href="?m=appoint&o=list&p=rid,{$list[loop].rid}">查看</a></td>
+          <td><a href="?m=doctor&o=list&p=rid,{$list[loop].rid}">查看</a> </td>
+          <td class="operate"><a href="?m=room&o=edit&p=rid,{$list[loop].rid}">编辑</a> <a href="?m=room&o=delete&p=rid,{$list[loop].rid}">删除</a></td>
+        </tr>
+		  {/section}
+		{/if}
+      </tbody>
+    </table>
+	<div class="pages">
+	  {$pages}
+	</div>
+    </div>

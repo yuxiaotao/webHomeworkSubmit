@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="www.mlinseo.com"> 
+<title>新用户注册-{$cfg.sitename}</title>
+<link type="text/css" href="{$imgDir}style.css" rel="stylesheet" />
+<script type="text/javascript" src="lib/images/date.js"></script>
+<link type="text/css" rel="stylesheet" href="lib/images/date.css" />
+</head>
+
+<body>
+<div id="home">
+  <div class="intro">
+    <div class="logo"><img src="{$imgDir}logo.jpg"  /></div>
+    <div id="userReg">
+    <h2>用户注册</h2>
+       <form method="post" action="?m=user&o=reg" id="regForm">
+          <table cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td>真实姓名：</td>
+                <td><input type="text" name="truename" value="{$user.truename}"  /> <span class="msg">{$msg.truename}</span></td>
+              </tr>
+              <tr>
+                <td>身份证号：</td>
+                <td><input type="text" name="id" value="{$user.id}"  /> <span class="msg">{$msg.id}</span></td>
+              </tr>
+              <tr>
+                <td>出生年月：</td>
+                <td><input type="text" value="{$user.birthday}"  id="birthday" name="birthday" onclick="SelectDate(this,finishtimeformat)"  /> <span class="msg">{$msg.birthday}</span></td>
+              </tr>
+              <tr>
+                <td>性别：</td>
+                <td><input type="radio" value="1"  name="gender"{if !empty($user.gender)} checked="checked"{/if} /> 男 <input type="radio" value="0"  name="gender"{if empty($user.gender)} checked="checked"{/if}  /> 女 <span class="msg">{$msg.gender}</span></td>
+              </tr>
+              <tr>
+                <td>座机号码：</td>
+                <td><input name="tel" value="{$user.tel}"  /> <span class="msg">{$msg.tel}</span></td>
+              </tr>
+              <tr>
+                <td>手机号码：</td>
+                <td><input name="mobile" value="{$user.mobile}"  /> 请务必填写正确的手机号以便获取预约卡号短信 <span class="msg">{$msg.mobile}</span></td>
+              </tr>
+              <tr>
+                <td>用户类型：</td>
+                <td><select name="type">{html_options options=$userTypes selected=$user.type}</select> <span class="msg">{$msg.type}</span></td>
+              </tr>
+              <tr>
+                <td>联系地址：</td>
+                <td><input name="address" value="{$user.address}" class="add" /> <span class="msg">{$msg.address}</span></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="submit" name="submit" value="确认注册"  class="submit"/> 注册成功后系统将自动向您的手机发送预约卡号，卡号永久有效。 <span class="msg">{$msg.result}</span></td>
+              </tr>
+            </tbody>
+          </table>
+      </form>
+</div>
+  </div>
+  <div class="login">
+    <h2>用户登录</h2>
+    <form action="?m=user&o=login" method="post">
+    <table cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td>卡号：</td>
+        <td><input type="text" name="uid" class="text"  /></td>
+      </tr>
+      <tr>
+        <td>姓名：</td>
+        <td><input type="text" name="truename" class="text"/></td>
+      </tr>
+        <tr>
+          <td>验证码：</td>
+          <td valign="middle"><input type="text" class="checknum" name="checknum" value="" /> <a href="javascript:getCheckNum();" title="看不清？点击更换"><img id="checkImg" src="?m=ajax&o=checknum" /></a></td>
+        </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value="登录在线预约系统" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><a href="?m=user&o=reg">没有卡号？在线注册</a></td>
+      </tr>
+    </tbody>
+    </table>
+    </form>
+  </div>
+</div>
+</body>
+</html>

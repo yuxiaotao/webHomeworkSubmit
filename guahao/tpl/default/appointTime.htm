@@ -1,0 +1,19 @@
+{include file="header.htm"}
+<div id="appointTime">
+  <h2>请选择来院时间</h2>
+  <div>
+    <form action="" method="post">
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+      <td><b>来院具体时间：{$date}</b></td>
+      <td><b>{$schedule.noon}</b></td>
+      <td><select name="h">{html_options options=$hours}</select> <b>点</b></td>
+      <td><select name="m">{html_options options=$mins}</select> <b>分</b></td>
+      <td><input type="submit" name="submit" value="确定" /></td>
+      </tr>
+    </table>
+    </form>
+  </div>
+</div>
+{include file="block/user.htm"}
+{include file="footer.htm"}

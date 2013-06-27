@@ -1,0 +1,21 @@
+{include file="header.htm"}
+<div id="roomList">
+  <h2>选择科室</h2>
+  <div class="rooms">
+    {if empty($rooms)}
+    暂无科室。
+    {else}
+    {foreach from=$rooms item=room}
+    <div class="room">
+      <h3>{$room.name}</h3>
+      <p>
+        <a href="?m=room&o=view&p=rid,{$room.rid}">科室简介</a>
+        <a href="?m=room&o=select&p=rid,{$room.rid}">进入预约</a>
+      </p>
+    </div>
+    {/foreach}
+    {/if}
+  </div>
+</div>
+{include file="block/user.htm"}
+{include file="footer.htm"}

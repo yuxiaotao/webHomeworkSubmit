@@ -1,0 +1,16 @@
+   <div class="sideBar">
+   <h2><em> </em>个人中心</h2>
+	<ul>
+      <li><a href="?m=matter&o=add" target="_blank">我有事情要办</a></li>
+      <li><a href="?m=matter&o=list&p=select,todo">我要为人办事</a></li>
+      <li class="line"></li>
+      <li><a href="?m=user&o=msglist">我的消息</a>{if $session.noreadnum}（{$session.noreadnum}）{/if}</li>
+      <li class="line"></li>
+      <li><a href="?m=user&o=mlist&p=select,my">我发布的事项</a></li>
+      <li><a href="?m=user&o=mlist&p=select,do">我办理的事项</a></li>
+      <li class="line"></li>
+      <li><a href="?m=user&o=profile">基本资料</a></li>
+      <li><a href="?m=user&o=resetpassword">重设密码</a></li>
+      <li><a href="?m=user&o=checkemail">邮箱认证</a>{if $session.emailcheck < 2}（未认证）{else}（已认证）{/if}</li>
+	</ul>
+	</div>

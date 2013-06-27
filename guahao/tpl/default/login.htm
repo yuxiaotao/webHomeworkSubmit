@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="www.mlinseo.com"> 
+<title>{$cfg.sitename}</title>
+<link type="text/css" href="view/images/style.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="home">
+  <div class="intro">
+    <div class="log0"><img src="{$imgDir}logo.jpg"  /></div>
+    <div class="txt">
+      <h2>医院介绍</h2>
+      <div>
+        <p>
+          广西壮族自治区人民医院位于南宁市风景秀丽的邕江之滨，南湖之畔。始建于1941年，经几代人不懈努力，现已发展成为一所以医疗为主，兼有科研、教学和预防保健为一体的大型综合性省级三级甲等医院，是广西的医疗中心。医院设有一个分院、两个门诊部和附属卫校。医院占地面积21.225万平方米（其中分院14.766万平方米），建筑面积21.85万平方米，医疗建筑面积12.95万平方米。设有临床、医技科室57个、3个广西重点学科、4个广西重点建设学科、18个省级医疗中心和13个院级重点学科。在职职工2658人，其中卫生技术人员2190人，高级卫技人员396人，博士、硕士409人，开放床位1813（院部1657﹢分院156）张，年门急诊量168.6万人次，住院病人4.7万人次，住院手术2.3万多人次。总资产18亿元，其中固定资产14.82亿元。 
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="login">
+    <h2>用户登录</h2>
+    <form action="?m=login" method="post">
+  <table cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td>卡号：</td>
+        <td><input type="text" name="cardId" class="text"  /></td>
+      </tr>
+      <tr>
+        <td>姓名：</td>
+        <td><input type="password" name="truename" class="text"/></td>
+      </tr>
+        <tr>
+          <td>验证码：</td>
+          <td valign="middle"><input type="text" class="checknum" name="checknum" value="" /> <a href="javascript:getCheckNum();" title="看不清？点击更换"><img id="checkImg" src="?m=ajax&o=checknum" /></a></td>
+        </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" value=" 登录系统 " /></td>
+      </tr>
+    </tbody>
+  </table>
+  </form>
+  </div>
+</div>
+</body>
+</html>
